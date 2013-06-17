@@ -1,0 +1,65 @@
+// match 
+matchAll(A,B)
+
+// Initialize variables
+
+//        C       D
+//     _______ _______
+//    |       |       |
+// C  |  1/1  |  3/0  |
+//    |_______|_______|
+//    |       |       |
+// D  |  0/3  |  2/2  |
+//    |_______|_______|
+
+// WinMatrix[Zeile][Spalte][Spieler]
+WinMatrix[0][0][0] = 1
+WinMatrix[0][0][1] = 1
+WinMatrix[0][1][0] = 3
+WinMatrix[0][1][1] = 0
+WinMatrix[1][0][0] = 0
+WinMatrix[1][0][1] = 3
+WinMatrix[1][1][0] = 2
+WinMatrix[1][1][1] = 2
+
+// set number of rounds
+rounds = 12
+
+// EYETRACKER ONLY FOR S1
+if (username == "S1")
+{
+  // INIT EYETRACKER
+  eyetrackerInitialise("localhost",4444,5555)
+  display("Look at the dots")
+  wait()
+
+  // CALIBRATE EYETRACKER AND START TRACKING
+  eyetrackerCalibrate()
+  display("Thanks - Calibration done")
+  filename = "PrisonersDilemma_" + username + ".dat" 
+  eyetrackerStart(60,filename)
+
+  // SEND TRIGGER
+  eyetrackerTrigger("Calibration Done")
+}
+
+// Welcome screen
+display("<h1>Prisoners Dilemma</h1>")
+display("Click when you are ready:")
+waitForPlayers("Ready!")
+
+// play the game 
+for (i=0; i<rounds; i=i+1)
+{
+  // present 
+  display("Round: " + i)
+  // 
+}
+
+if (username=="S1")
+{
+  eyetrackerStop()  
+}
+
+display("End of experiment")
+waitForPlayers()
