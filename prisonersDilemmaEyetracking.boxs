@@ -66,6 +66,32 @@ for (i=0; i<rounds; i=i+1)
   // present 
   display("Round: " + i)
   // 
+	// Present the Problem
+	table = "<table>"
+	table = table + "  <thead>"
+	table = table + "    <tr>"
+	table = table + "      <th>&nbsp;</th>"
+	table = table + "      <th>Cooperate</th>"
+	table = table + "      <th>Defect</th>"
+	table = table + "    </tr>"
+	table = table + "  </thead>"
+	table = table + "  <tbody>"
+	table = table + "    <tr>"
+	table = table + "      <th>Cooperate</th>"
+	table = table + "      <td>" + WinMatrix[0][0][0] + " / " + WinMatrix[0][0][1] + "</td>"
+	table = table + "      <td>" + WinMatrix[0][1][0] + " / " + WinMatrix[0][1][1] + "</td>"
+	table = table + "    </tr>"
+	table = table + "    <tr>"
+	table = table + "      <th>Defect</th>"
+	table = table + "      <td>" + WinMatrix[1][0][0] + " / " + WinMatrix[1][0][1] + "</td>"
+	table = table + "      <td>" + WinMatrix[1][1][0] + " / " + WinMatrix[1][1][1] + "</td>"
+	table = table + "    </tr>"
+	table = table + "    <tr>"
+	table = table + "  </tbody>"
+	table = table + "</table>"
+	display(table)
+	choice(action[round],"Cooperate", "Defect")
+	waitForPlayers("Weiter")
 }
 
 if (username=="S1")
