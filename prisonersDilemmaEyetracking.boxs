@@ -26,7 +26,7 @@ WinMatrix[1][1][1] = -2
 // overall win
 totalwin = 0
 // set number of rounds
-rounds = 12
+rounds = 2
 
 
 // Welcome screen
@@ -65,9 +65,6 @@ if (username == "S1")
 // play the game 
 for (i=1; i<=rounds; i=i+1)
 {
-  // present 
-  display("Round: " + i)
-  // 
 	// Present the Problem
 	table = "<table>"
 	table = table + "  <thead>"
