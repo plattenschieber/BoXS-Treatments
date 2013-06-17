@@ -26,6 +26,16 @@ WinMatrix[1][1][1] = -2
 // set number of rounds
 rounds = 12
 
+
+// Welcome screen
+display("<h1>Willkommen beim Experiment</h1>")
+display("Warten Sie auf die Instruktionen der Versuchsleiter ")
+//inputNumber(checkExperimenter)
+//assert(checkExperimenter == 222)
+//VPN Code
+display("Bitte geben Sie nun Ihre VP-Nummer ein:")
+//inputString(vpnumber)
+
 // EYETRACKER ONLY FOR S1
 if (username == "S1")
 {
