@@ -91,6 +91,59 @@ for (i=1; i<=rounds; i=i+1)
 	display(table)
 	choice(action[round],"Cooperate", "Defect")
 	waitForPlayers("Weiter")
+
+  // calculate round win
+  if (action[round] == "Cooperate")
+  {
+    if (opponent.action[round] == "Cooperate")
+    {
+     if(role == "A")
+      {
+        win[round] = WinMatrix[0][0][0]
+      }
+      if(role == "B")
+      {
+        win[round] = WinMatrix[0][0][1]
+      }      
+    }  
+    if (opponent.action[round] == "Defect")
+    {
+      if(role == "A")
+      {
+        win[round] = WinMatrix[0][1][0]
+      }
+      if(role == "B")
+      {
+        win[round] = WinMatrix[1][0][1]
+      }     
+    }
+  }
+  if (action[round] == "Defect")
+  {
+    if (opponent.action[round] == "Cooperate")
+    {
+      if(role == "A")
+      {
+        win[round] = WinMatrix[1][0][0]
+      }
+      if(role == "B")
+      {
+        win[round] = WinMatrix[0][1][1]
+      }      
+    }
+    if (opponent.action[round] == "Defect")
+    {
+      if(role == "A")
+      {
+        win[round] = WinMatrix[1][1][0]
+      }
+      if(role == "B")
+      {
+        win[round] = WinMatrix[1][1][1]
+      }
+    }
+  }
+ 
   // present
   display("Sie haben '" + action[round] + "' gewählt" )
   display("Ihr Gegener hat '" + opponent.action[round] + "' gewählt" )
