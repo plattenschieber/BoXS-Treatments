@@ -41,23 +41,24 @@ if (username == "S1")
 {
   // INIT EYETRACKER
   eyetrackerInitialise("localhost",4444,5555)
-  display("Look at the dots")
+  display("Mit weiter gelangen Sie zur Kalibrierung")
+  wait()
+  display("<h1>Bitte bewegen Sie sich nun nicht mehr und verfolgen Sie bitte die erscheinenden Punkte</h1>")
   wait()
 
   // CALIBRATE EYETRACKER AND START TRACKING
-  eyetrackerCalibrate()
-  display("Thanks - Calibration done")
-  filename = "PrisonersDilemma_" + username + ".dat" 
+  //eyetrackerCalibrate()
+  display("Danke - Die Kalibrierung war erfolgreich")
+  filename = "PrisonersDilemma_" + vpnumber + ".dat" 
   eyetrackerStart(60,filename)
 
   // SEND TRIGGER
   eyetrackerTrigger("Calibration Done")
 }
 
-// Welcome screen
-display("<h1>Prisoners Dilemma</h1>")
-display("Click when you are ready:")
-waitForPlayers("Ready!")
+// Wait for everybody being ready
+//waitForPlayers("Bitte warten")
+
 
 // play the game 
 for (i=0; i<rounds; i=i+1)
@@ -72,5 +73,9 @@ if (username=="S1")
   eyetrackerStop()  
 }
 
-display("End of experiment")
-waitForPlayers()
+display("<h1>Das Experiment ist nun beendet. Bitte klicken Sie weiter um die Auszahlung anzuzeigen</h1>")
+wait()
+display("Sie haben insgesamt folgende Anzahl an Talern verdient: " + totalwin)
+display("Dies entspricht einem Betrag von: " + totalwin * 1.25)
+display("<br><br> Bitte verständigen Sie nun die Versuchsleitung per Handzeichen")
+waitForPlayers("Beenden")
