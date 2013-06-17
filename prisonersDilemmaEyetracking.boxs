@@ -92,55 +92,34 @@ for (i=1; i<=rounds; i=i+1)
 	choice(action[round],"Cooperate", "Defect")
 	waitForPlayers("Weiter")
 
-  // calculate round win
-  if (action[round] == "Cooperate")
+  if (role=="A" && action[round] == "Cooperate")
   {
-    if (opponent.action[round] == "Cooperate")
+    if(B.action[round] == "Cooperate")
     {
-     if(role == "A")
-      {
-        win[round] = WinMatrix[0][0][0]
-      }
-      if(role == "B")
-      {
-        win[round] = WinMatrix[0][0][1]
-      }      
-    }  
-    if (opponent.action[round] == "Defect")
+      display("A-c, B-c")
+      win[round] = WinMatrix[0][0][0]
+      B.win[round] = WinMatrix[0][0][1] 
+    }
+    if(B.action[round] == "Defect")
     {
-      if(role == "A")
-      {
-        win[round] = WinMatrix[0][1][0]
-      }
-      if(role == "B")
-      {
-        win[round] = WinMatrix[1][0][1]
-      }     
+      display("A-c, B-d")
+      win[round] = WinMatrix[0][1][0]
+      B.win[round] = WinMatrix[0][1][1]
     }
   }
-  if (action[round] == "Defect")
+  if (role=="A" && action[round] == "Defect")
   {
-    if (opponent.action[round] == "Cooperate")
+    if(B.action[round] == "Cooperate")
     {
-      if(role == "A")
-      {
-        win[round] = WinMatrix[1][0][0]
-      }
-      if(role == "B")
-      {
-        win[round] = WinMatrix[0][1][1]
-      }      
+      display("A-d, B-c")
+      win[round] = WinMatrix[1][0][0]
+      B.win[round] = WinMatrix[1][0][1] 
     }
-    if (opponent.action[round] == "Defect")
+    if(B.action[round] == "Defect")
     {
-      if(role == "A")
-      {
-        win[round] = WinMatrix[1][1][0]
-      }
-      if(role == "B")
-      {
-        win[round] = WinMatrix[1][1][1]
-      }
+      display("A-d, B-d")
+      win[round] = WinMatrix[1][1][0]
+      B.win[round] = WinMatrix[1][1][1]
     }
   }
  
