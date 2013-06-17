@@ -61,7 +61,7 @@ if (username == "S1")
 
 
 // play the game 
-for (i=0; i<rounds; i=i+1)
+for (i=1; i<=rounds; i=i+1)
 {
   // present 
   display("Round: " + i)
