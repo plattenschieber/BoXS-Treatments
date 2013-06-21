@@ -72,22 +72,23 @@ for (i=1; i<=games; i=i+1)
       // start the eyetracker
       if (username == "S1")
       {
-        // INIT EYETRACKER
+        // init eyetracker
         eyetrackerInitialise("localhost",4444,5555)
         display("Mit weiter gelangen Sie zur Kalibrierung")
         wait()
         display("<h1>Bitte bewegen Sie sich nun nicht mehr und verfolgen Sie bitte die erscheinenden Punkte</h1>")
         wait()
 
-        // CALIBRATE EYETRACKER AND START TRACKING
+        // calibrate eyetracker and start tracking
         eyetrackerCalibrate()
         display("Danke - Die Kalibrierung war erfolgreich")
         filename = "PrisonersDilemma_" + vpnumber + ".dat" 
         eyetrackerStart(60,filename)
 
-        // SEND TRIGGER
+        // send trigger
         eyetrackerTrigger("Calibration Done")
       }
+      // only a normal wait - we don't need to hold on the fast players
       wait()
     }
 
