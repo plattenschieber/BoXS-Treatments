@@ -1,0 +1,67 @@
+games = 3
+// play the game 
+for (i=1; i<=games; i=i+1)
+{
+  // we can only play within the matching environment 
+  matchStranger(A,B)
+
+  // update gameCounter to detect last round (because 'i' is not available inside the matching environment)
+  gameCounter = gameCounter + 1
+  // set some variables 
+  if (firstGame==0)
+  {
+    display("This is the beginning of the game")
+    display("Some instructions here")
+    // firstGame is a boolean that we need only once 
+    firstGame = 1
+    // set # of rounds per game
+    rounds = 2
+    // first game will be set here, updating will take place above
+    gameCounter = 1
+    wait()
+  }
+
+  // here takes the game place
+  for(j=1; j<=rounds; j=j+1)
+  {
+    if(j==1)
+    {
+      // do some stuff in the first round
+      display("This is the first Round of the " + gameCounter + ". game")
+      display("Some instructions")
+      wait()
+    }
+
+    display("Presenting stuff")
+    // we need to calculate the payoffs here -> so wait for the opponent
+    waitForPlayers()
+
+    display("Presenting results")
+    wait()
+
+    if (j==rounds)
+    {
+      display("This is the last Round of the " + gameCounter + ". game")
+      display("Presenting information of this game")
+      wait()
+    }
+  }
+  
+ 
+  if (gameCounter == 3)
+  {
+    if (username=="S1")
+    {
+      display("Stop Eyetracker")
+      eyetrackerStop()  
+    }
+
+    display("Sie haben insgesamt folgende Anzahl an Talern verdient: " + totalwin)
+    display("Dies entspricht einem Betrag von: " + totalwin / 200)
+    display("<br><br> Bitte verständigen Sie nun die Versuchsleitung per Handzeichen")
+    waitForPlayers("Beenden")
+  }
+  matchDone()
+}
+
+
