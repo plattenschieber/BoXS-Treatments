@@ -179,7 +179,6 @@ for (i=1; i<=games; i=i+1)
     }
 
 
-    // next round can start without waiting for the opponent
     wait()
 
     // last round
