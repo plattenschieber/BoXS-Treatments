@@ -92,32 +92,9 @@ for (i=1; i<=games; i=i+1)
       wait()
     }
 
-    // presenting the matrix and options
-    table = "<table>"
-    table = table + "  <thead>"
-    table = table + "    <tr>"
-    table = table + "      <th>&nbsp;</th>"
-    table = table + "      <th>cooperate</th>"
-    table = table + "      <th>defect</th>"
-    table = table + "    </tr>"
-    table = table + "  </thead>"
-    table = table + "  <tbody>"
-    table = table + "    <tr>"
-    table = table + "      <th>cooperate</th>"
-    table = table + "      <td>" + winmatrix[0][0][0] + " / " + winmatrix[0][0][1] + "</td>"
-    table = table + "      <td>" + winmatrix[0][1][0] + " / " + winmatrix[0][1][1] + "</td>"
-    table = table + "    </tr>"
-    table = table + "    <tr>"
-    table = table + "      <th>defect</th>"
-    table = table + "      <td>" + winmatrix[1][0][0] + " / " + winmatrix[1][0][1] + "</td>"
-    table = table + "      <td>" + winmatrix[1][1][0] + " / " + winmatrix[1][1][1] + "</td>"
-    table = table + "    </tr>"
-    table = table + "    <tr>"
-    table = table + "  </tbody>"
-    table = table + "</table>"
-    display(table)
-    choice(action,"cooperate", "defect")
-    waitForPlayers("weiter")    // we need to calculate the payoffs here -> so wait for the opponent
+    display("Presenting game")
+    // we need to calculate the payoffs here -> so wait for the opponent
+    waitForPlayers()
 
     display("Presenting results")
     wait()
