@@ -20,13 +20,6 @@ for (i=1; i<=games; i=i+1)
     rounds = 1
     // first game will be set here, updating will take place above
     gameCounter = 1
-    // we save all data in an array corresponding to our vpnumbers
-    // vp[vpnumber][datafield][roundnumber] 
-    // -- where vpnumber is in {1..12}, 
-    //          datafield{1-choice, 2-win, 3-totalwin (without roundnumber)} and 
-    //          roundnumer {1..rounds}
-    *.*.vp[0][0][0] = 0
-
     wait()
   }
 
