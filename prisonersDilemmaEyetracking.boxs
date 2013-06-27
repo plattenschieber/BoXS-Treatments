@@ -25,8 +25,8 @@ WinMatrix[1][1][0] = 100
 WinMatrix[1][1][1] = 100
 // overall win
 totalwin = 0
-// number of rounds per player combination
-rounds = 10
+// set number of rounds
+rounds = 2
 
 
 // Welcome screen
