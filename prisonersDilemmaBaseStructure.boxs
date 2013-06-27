@@ -119,48 +119,7 @@ for (i=1; i<=games; i=i+1)
     choice(action,"cooperate", "defect")
     waitForPlayers("weiter")    // we need to calculate the payoffs here -> so wait for the opponent
 
-    // calculate Payoff 
-    if (A.action == "Cooperate")
-    {
-      if(B.action == "Cooperate")
-      {
-        A.win = WinMatrix[0][0][0]
-        B.win = WinMatrix[0][0][1] 
-      }
-      if(B.action == "Defect")
-      {
-        A.win = WinMatrix[0][1][0]
-        B.win = WinMatrix[0][1][1]
-      }
-    }
-    if (A.action == "Defect")
-    {
-      if(B.action == "Cooperate")
-      {
-        A.win = WinMatrix[1][0][0]
-        B.win = WinMatrix[1][0][1] 
-      }
-      if(B.action == "Defect")
-      {
-        A.win = WinMatrix[1][1][0]
-        B.win = WinMatrix[1][1][1]
-      }
-    }
-
-    // present actions and payoff
-    display("Sie haben '" + action + "' gewählt" )
-    if (role == "B")
-    {
-      display("Ihr Gegener hat '" + A.action + "' gewählt" )
-    }
-    if (role == "A")
-    {
-      display("Ihr Gegener hat '" + B.action + "' gewählt" )
-    }
-    display("Ihr Rundengewinn beträgt somit " + win)
-    
-
-
+    display("Presenting results")
     wait()
 
     // last round
