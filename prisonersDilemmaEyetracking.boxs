@@ -1,77 +1,72 @@
+// matching
+matchStranger(A,B)
+// new style for tables
+style("body{ padding: 0px; font-size: 12px; } h1{font-size: 130%; margin-top: 0px; margin-bottom: 3px; font-weight: normal;} h2{font-size: 115%; margin-top: 0px; margin-bottom: 3px; font-weight: normal; } table{border-collapse:collapse;} th{text-align:center; background:#fff4c6; color:#333; padding:8px 16px 8px 8px; border-right:1px solid #fff; border-bottom:1px solid #fff;} td{text-align:center; color:#333; padding:8px; border-right:1px solid #f3f0e4; border-bottom:1px solid #f3f0e4;}")
+
+// Initialize variables
+
+//        C       D
+//     _______ _______
+//    |       |       |
+// C  |200/200| 50/300|
+//    |_______|_______|
+//    |       |       |
+// D  |300/50 |100/100|
+//    |_______|_______|
+
+// WinMatrix[Zeile][Spalte][Spieler]
+WinMatrix[0][0][0] = 200
+WinMatrix[0][0][1] = 200
+WinMatrix[0][1][0] = 50
+WinMatrix[0][1][1] = 300
+WinMatrix[1][0][0] = 300
+WinMatrix[1][0][1] = 50
+WinMatrix[1][1][0] = 100
+WinMatrix[1][1][1] = 100
+// overall win
+totalwin = 0
+// number of rounds per player combination
 rounds = 10
+
+
+// Welcome screen
+//display("<h1>Willkommen beim Experiment</h1>")
+display("Warten Sie auf die Instruktionen der Versuchsleiter ")
+//inputNumber(checkExperimenter)
+//assert(checkExperimenter == 222)
+//VPN Code
+display("Bitte geben Sie nun Ihre VP-Nummer ein:")
+//inputString(vpnumber)
+
+// EYETRACKER ONLY FOR S1
+if (username == "S1")
+{
+  // INIT EYETRACKER
+  eyetrackerInitialise("localhost",4444,5555)
+  display("Mit weiter gelangen Sie zur Kalibrierung")
+  wait()
+  display("<h1>Bitte bewegen Sie sich nun nicht mehr und verfolgen Sie bitte die erscheinenden Punkte</h1>")
+  wait()
+
+  // CALIBRATE EYETRACKER AND START TRACKING
+  eyetrackerCalibrate()
+  display("Danke - Die Kalibrierung war erfolgreich")
+  filename = "PrisonersDilemma_" + vpnumber + ".dat" 
+  eyetrackerStart(60,filename)
+
+  // SEND TRIGGER
+  eyetrackerTrigger("Calibration Done")
+}
+
+// Wait for everybody being ready
+waitForPlayers("Weiter")
+
+
 // play the game 
 for (i=1; i<=rounds; i=i+1)
 {
-  matchStranger(A,B)
-  // set all stuff only in the first round - use the following 'trick'
-  // if a variable is never used before, it is by default 0 ...
-  if (isFirstRound == 0)
-  {
-    // ... so set it to '1' inside the if-block
-    isFirstRound = 1
-    // new style for tables
-    style("body{ padding: 0px; font-size: 12px; } h1{font-size: 130%; margin-top: 0px; margin-bottom: 3px; font-weight: normal;} h2{font-size: 115%; margin-top: 0px; margin-bottom: 3px; font-weight: normal; } table{border-collapse:collapse;} th{text-align:center; background:#fff4c6; color:#333; padding:8px 16px 8px 8px; border-right:1px solid #fff; border-bottom:1px solid #fff;} td{text-align:center; color:#333; padding:8px; border-right:1px solid #f3f0e4; border-bottom:1px solid #f3f0e4;}")
-
-    // Initialize variables
-
-    //        C       D
-    //     _______ _______
-    //    |       |       |
-    // C  |200/200| 50/300|
-    //    |_______|_______|
-    //    |       |       |
-    // D  |300/50 |100/100|
-    //    |_______|_______|
-
-    // WinMatrix[Zeile][Spalte][Spieler]
-    WinMatrix[0][0][0] = 200
-    WinMatrix[0][0][1] = 200
-    WinMatrix[0][1][0] = 50
-    WinMatrix[0][1][1] = 300
-    WinMatrix[1][0][0] = 300
-    WinMatrix[1][0][1] = 50
-    WinMatrix[1][1][0] = 100
-    WinMatrix[1][1][1] = 100
-    // overall win
-    totalwin = 0
-    // number of rounds per player combination
-    rounds = 10
-
-
-    // Welcome screen
-    //display("<h1>Willkommen beim Experiment</h1>")
-    display("Warten Sie auf die Instruktionen der Versuchsleiter ")
-    //inputNumber(checkExperimenter)
-    //assert(checkExperimenter == 222)
-    //VPN Code
-    display("Bitte geben Sie nun Ihre VP-Nummer ein:")
-    //inputString(vpnumber)
-
-    // EYETRACKER ONLY FOR S1
-    if (username == "S1")
-    {
-      // INIT EYETRACKER
-      eyetrackerInitialise("localhost",4444,5555)
-      display("Mit weiter gelangen Sie zur Kalibrierung")
-      wait()
-      display("<h1>Bitte bewegen Sie sich nun nicht mehr und verfolgen Sie bitte die erscheinenden Punkte</h1>")
-      wait()
-
-      // CALIBRATE EYETRACKER AND START TRACKING
-      eyetrackerCalibrate()
-      display("Danke - Die Kalibrierung war erfolgreich")
-      filename = "PrisonersDilemma_" + vpnumber + ".dat" 
-      eyetrackerStart(60,filename)
-
-      // SEND TRIGGER
-      eyetrackerTrigger("Calibration Done")
-    }
-
-    // Wait for everybody being ready
-    waitForPlayers("Weiter")
-  }
-
-
+      matchStranger(A,B)
+	// Present the problem
 	table = "<table>"
 	table = table + "  <thead>"
 	table = table + "    <tr>"
@@ -143,7 +138,6 @@ for (i=1; i<=rounds; i=i+1)
   action[i] = action
 
   wait()
-  matchDone()
 }
 
 if (username=="S1")
