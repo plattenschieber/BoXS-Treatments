@@ -145,7 +145,6 @@ if (username=="S1")
   eyetrackerStop()  
 }
 
-// End of game reached
 display("<h1>Das Experiment ist nun beendet. Bitte klicken Sie weiter um die Auszahlung anzuzeigen</h1>")
 wait()
 display("Sie haben insgesamt folgende Anzahl an Talern verdient: " + totalwin)
