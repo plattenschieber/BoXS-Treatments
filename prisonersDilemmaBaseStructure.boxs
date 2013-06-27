@@ -20,27 +20,6 @@ for (i=1; i<=games; i=i+1)
     rounds = 1
     // first game will be set here, updating will take place above
     gameCounter = 1
-    // new style for tables
-    style("body{ padding: 0px; font-size: 12px; } h1{font-size: 130%; margin-top: 0px; margin-bottom: 3px; font-weight: normal;} h2{font-size: 115%; margin-top: 0px; margin-bottom: 3px; font-weight: normal; } table{border-collapse:collapse;} th{text-align:center; background:#fff4c6; color:#333; padding:8px 16px 8px 8px; border-right:1px solid #fff; border-bottom:1px solid #fff;} td{text-align:center; color:#333; padding:8px; border-right:1px solid #f3f0e4; border-bottom:1px solid #f3f0e4;}")
-
-    //        C       D
-    //     _______ _______
-    //    |       |       |
-    // C  |200/200| 50/300|
-    //    |_______|_______|
-    //    |       |       |
-    // D  |300/50 |100/100|
-    //    |_______|_______|
-
-    // WinMatrix[Zeile][Spalte][Spieler]
-    WinMatrix[0][0][0] = 200
-    WinMatrix[0][0][1] = 200
-    WinMatrix[0][1][0] = 50
-    WinMatrix[0][1][1] = 300
-    WinMatrix[1][0][0] = 300
-    WinMatrix[1][0][1] = 50
-    WinMatrix[1][1][0] = 100
-    WinMatrix[1][1][1] = 100
     // we save all data in an array corresponding to our vpnumbers
     // vp[vpnumber][datafield][roundnumber] 
     // -- where vpnumber is in {1..12}, 
