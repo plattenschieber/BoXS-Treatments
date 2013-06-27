@@ -182,12 +182,8 @@ for (i=1; i<=games; i=i+1)
   // end of game ATTENTION: HARD CODED NUMBER!!!!!!!!
   if (gameCounter == 3)
   {
-    display("<h1>Das Experiment ist nun beendet. Bitte klicken Sie weiter um die Auszahlung anzuzeigen</h1>")
-    wait()
-    display("Sie haben insgesamt folgende Anzahl an Talern verdient: " + totalwin)
-    display("Dies entspricht einem Betrag von: " + totalwin / 200)
-    display("<br><br> Bitte verständigen Sie nun die Versuchsleitung per Handzeichen")
-    waitForPlayers("Beenden") 
+    display("End of game")
+    waitForPlayers("Beenden")
   }
   matchDone()
 }
