@@ -8,7 +8,6 @@ for (i=1; i<=games; i=i+1)
 
   // update gameCounter to detect last round (because 'i' is not available inside the matching environment)
   gameCounter = gameCounter + 1
-
   // set some variables 
   if (firstGame==0)
   {
@@ -17,7 +16,7 @@ for (i=1; i<=games; i=i+1)
     // firstGame is a boolean that we need to enter this if block only once
     firstGame = 1
     // set # of rounds per game
-    rounds = 1
+    rounds = 2
     // first game will be set here, updating will take place above
     gameCounter = 1
     wait()
@@ -81,6 +80,9 @@ for (i=1; i<=games; i=i+1)
   // end of game ATTENTION: HARD CODED NUMBER!!!!!!!!
   if (gameCounter == 3)
   {
+    display("Sie haben insgesamt folgende Anzahl an Talern verdient: " + totalwin)
+    display("Dies entspricht einem Betrag von: " + totalwin / 200)
+    display("<br><br> Bitte verständigen Sie nun die Versuchsleitung per Handzeichen")
     display("End of game")
     waitForPlayers("Beenden")
   }
