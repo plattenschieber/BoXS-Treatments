@@ -65,8 +65,7 @@ waitForPlayers("Weiter")
 // play the game 
 for (i=1; i<=rounds; i=i+1)
 {
-      matchStranger(A,B)
-	// Present the problem
+	// Present the Problem
 	table = "<table>"
 	table = table + "  <thead>"
 	table = table + "    <tr>"
@@ -120,22 +119,14 @@ for (i=1; i<=rounds; i=i+1)
       B.win = WinMatrix[1][1][1]
     }
   }
-
-  // present actions and payoff
-  display("Sie haben '" + action + "' gewählt" )
-  if (role == "B")
-  {
-    display("Ihr Gegener hat '" + A.action + "' gewählt" )
-  }
-  if (role == "A")
-  {
-    display("Ihr Gegener hat '" + B.action + "' gewählt" )
-  }
-  display("Ihr Rundengewinn beträgt somit " + win)
-  totalwin = totalwin + win
+ 
+  // present
+  display("Sie haben '" + action[round] + "' gewählt" )
+  display("Ihr Gegener hat '" + opponent.action[round] + "' gewählt" )
+  display("Ihr Rundengewinn beträgt somit " + win[round])
+  totalwin = totalwin + win[round]
   win[i] = win
   action[i] = action
-
   wait()
 }
 
