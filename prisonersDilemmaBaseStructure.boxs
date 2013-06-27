@@ -65,10 +65,7 @@ for (i=1; i<=games; i=i+1)
       // do some stuff in the first round
       display("This is the first Round of the " + gameCounter + ". game")
       display("Some instructions for new player including new vpnumber!!!")
-      //VPN Code
-      display("Bitte geben Sie nun Ihre VP-Nummer ein:")
-      inputString(vpnumber)
-
+      inputNumber(vpnumber)
       // start the eyetracker
       if (username == "S1")
       {
