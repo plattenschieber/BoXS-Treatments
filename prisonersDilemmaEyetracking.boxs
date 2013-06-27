@@ -30,7 +30,7 @@ rounds = 10
 
 
 // Welcome screen
-//display("<h1>Willkommen beim Experiment</h1>")
+display("<h1>Willkommen beim Experiment</h1>")
 display("Warten Sie auf die Instruktionen der Versuchsleiter ")
 //inputNumber(checkExperimenter)
 //assert(checkExperimenter == 222)
@@ -49,7 +49,7 @@ if (username == "S1")
   wait()
 
   // CALIBRATE EYETRACKER AND START TRACKING
-  eyetrackerCalibrate()
+  //eyetrackerCalibrate()
   display("Danke - Die Kalibrierung war erfolgreich")
   filename = "PrisonersDilemma_" + vpnumber + ".dat" 
   eyetrackerStart(60,filename)
@@ -59,7 +59,7 @@ if (username == "S1")
 }
 
 // Wait for everybody being ready
-waitForPlayers("Weiter")
+//waitForPlayers("Bitte warten")
 
 
 // play the game 
