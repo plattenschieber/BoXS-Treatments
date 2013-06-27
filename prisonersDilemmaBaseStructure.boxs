@@ -46,12 +46,6 @@ for (i=1; i<=games; i=i+1)
     {
       display("This was the last Round of the " + gameCounter + ". game")
       display("Presenting information of this game")
-      // stop the eyetracker
-      if (username=="S1")
-      {
-        display("Stop Eyetracker")
-        eyetrackerStop()  
-      }
       wait()
     }
   }
@@ -60,6 +54,12 @@ for (i=1; i<=games; i=i+1)
   // end of game ATTENTION: HARD CODED NUMBER!!!!!!!!
   if (gameCounter == 3)
   {
+    if (username=="S1")
+    {
+      display("Stop Eyetracker")
+      eyetrackerStop()  
+    }
+
     display("Sie haben insgesamt folgende Anzahl an Talern verdient: " + totalwin)
     display("Dies entspricht einem Betrag von: " + totalwin / 200)
     display("<br><br> Bitte verständigen Sie nun die Versuchsleitung per Handzeichen")
