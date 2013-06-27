@@ -161,24 +161,6 @@ for (i=1; i<=games; i=i+1)
     
 
 
-    // save win and actions into the global array 'vp'
-    if (vpnumber % 100 == 1)
-    {
-      *.*.vp[1][1][j+gameCounter-1] = action
-      *.*.vp[1][2][j+gameCounter-1] = win
-      // in the first round of the first game, there was no win before
-      if(j==1 && gameCounter == 1)
-      {
-        *.*.vp[1][3][j+gameCounter-1] = win
-      }
-      if (j>1 || gameCounter > 1)
-      {
-        *.*.vp[1][3][j+gameCounter-1] = vp[1][3][j+gameCounter-2] + win
-
-      }
-    }
-
-
     wait()
 
     // last round
