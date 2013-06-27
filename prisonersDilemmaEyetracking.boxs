@@ -104,7 +104,6 @@ for (i=1; i<=rounds; i=i+1)
     }
     if(B.action == "Defect")
     {
-      A.win = WinMatrix[0][1][0]
       B.win = WinMatrix[0][1][1]
     }
   }
