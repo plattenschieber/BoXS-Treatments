@@ -1,3 +1,4 @@
+// set the number of games - ATTENTION: this variable (including 'i') will not be seen inside
 games = 3
 // play the game 
 for (i=1; i<=games; i=i+1)
@@ -12,7 +13,7 @@ for (i=1; i<=games; i=i+1)
   {
     display("This is the beginning of the game")
     display("Some instructions here")
-    // firstGame is a boolean that we need only once 
+    // firstGame is a boolean that we need to enter this if block only once
     firstGame = 1
     // set # of rounds per game
     rounds = 2
@@ -21,33 +22,36 @@ for (i=1; i<=games; i=i+1)
     wait()
   }
 
-  // here takes the game place
+  // here takes place the game
   for(j=1; j<=rounds; j=j+1)
   {
+    // first round 
     if(j==1)
     {
       // do some stuff in the first round
       display("This is the first Round of the " + gameCounter + ". game")
-      display("Some instructions")
+      display("Some instructions for new player")
       wait()
     }
 
-    display("Presenting stuff")
+    display("Presenting game")
     // we need to calculate the payoffs here -> so wait for the opponent
     waitForPlayers()
 
     display("Presenting results")
     wait()
 
+    // last round
     if (j==rounds)
     {
-      display("This is the last Round of the " + gameCounter + ". game")
+      display("This was the last Round of the " + gameCounter + ". game")
       display("Presenting information of this game")
       wait()
     }
   }
   
  
+  // end of game ATTENTION: HARD CODED NUMBER!!!!!!!!
   if (gameCounter == 3)
   {
     if (username=="S1")
@@ -59,6 +63,7 @@ for (i=1; i<=games; i=i+1)
     display("Sie haben insgesamt folgende Anzahl an Talern verdient: " + totalwin)
     display("Dies entspricht einem Betrag von: " + totalwin / 200)
     display("<br><br> Bitte verständigen Sie nun die Versuchsleitung per Handzeichen")
+    display("End of game")
     waitForPlayers("Beenden")
   }
   matchDone()
