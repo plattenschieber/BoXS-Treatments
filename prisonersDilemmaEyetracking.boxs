@@ -89,37 +89,34 @@ for (i=1; i<=rounds; i=i+1)
 	table = table + "  </tbody>"
 	table = table + "</table>"
 	display(table)
-	choice(action[round],"Cooperate", "Defect")
+	choice(action,"Cooperate", "Defect")
 	waitForPlayers("Weiter")
 
-  if (role=="A" && action[round] == "Cooperate")
+
+  // Calculate Payoff 
+  if (A.action == "Cooperate")
   {
-    if(B.action[round] == "Cooperate")
+    if(B.action == "Cooperate")
     {
-      display("A-c, B-c")
-      win[round] = WinMatrix[0][0][0]
-      B.win[round] = WinMatrix[0][0][1] 
+      A.win = WinMatrix[0][0][0]
+      B.win = WinMatrix[0][0][1] 
     }
-    if(B.action[round] == "Defect")
+    if(B.action == "Defect")
     {
-      display("A-c, B-d")
-      win[round] = WinMatrix[0][1][0]
-      B.win[round] = WinMatrix[0][1][1]
+      B.win = WinMatrix[0][1][1]
     }
   }
-  if (role=="A" && action[round] == "Defect")
+  if (A.action == "Defect")
   {
-    if(B.action[round] == "Cooperate")
+    if(B.action == "Cooperate")
     {
-      display("A-d, B-c")
-      win[round] = WinMatrix[1][0][0]
-      B.win[round] = WinMatrix[1][0][1] 
+      A.win = WinMatrix[1][0][0]
+      B.win = WinMatrix[1][0][1] 
     }
-    if(B.action[round] == "Defect")
+    if(B.action == "Defect")
     {
-      display("A-d, B-d")
-      win[round] = WinMatrix[1][1][0]
-      B.win[round] = WinMatrix[1][1][1]
+      A.win = WinMatrix[1][1][0]
+      B.win = WinMatrix[1][1][1]
     }
   }
  
@@ -128,6 +125,8 @@ for (i=1; i<=rounds; i=i+1)
   display("Ihr Gegener hat '" + opponent.action[round] + "' gewählt" )
   display("Ihr Rundengewinn beträgt somit " + win[round])
   totalwin = totalwin + win[round]
+  win[i] = win
+  action[i] = action
   wait()
 }
 
