@@ -51,9 +51,10 @@ for (i=1; i<=games; i=i+1)
     // welcome screen
     display("<h1>Willkommen beim Experiment</h1>")
     display("Warten Sie auf die Instruktionen der Versuchsleiter ")
-    inputNumber(checkExperimenter)
-    assert(checkExperimenter == 222)
     wait()
+    //inputNumber(checkExperimenter)
+    //assert(checkExperimenter == 222)
+    //wait()
   }
 
   // here takes place the game
@@ -70,7 +71,7 @@ for (i=1; i<=games; i=i+1)
       inputString(vpnumber)
 
       // start the eyetracker
-      if (username == "S1")
+      if (username == "S")
       {
         // init eyetracker
         eyetrackerInitialise("localhost",4444,5555)
@@ -188,7 +189,7 @@ for (i=1; i<=games; i=i+1)
       display("This was the last Round of the " + gameCounter + ". game")
       display("Presenting information of this game")
       // stop the eyetracker
-      if (username=="S1")
+      if (username=="S")
       {
         display("Stop Eyetracker")
         eyetrackerStop()  
