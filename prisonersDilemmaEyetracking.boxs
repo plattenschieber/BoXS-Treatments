@@ -8,21 +8,21 @@ style("body{ padding: 0px; font-size: 12px; } h1{font-size: 130%; margin-top: 0p
 //        C       D
 //     _______ _______
 //    |       |       |
-// C  |  1/1  |  3/0  |
+// C  |200/200| 50/300|
 //    |_______|_______|
 //    |       |       |
-// D  |  0/3  |  2/2  |
+// D  |300/50 |100/100|
 //    |_______|_______|
 
 // WinMatrix[Zeile][Spalte][Spieler]
-WinMatrix[0][0][0] = -1
-WinMatrix[0][0][1] = -1
-WinMatrix[0][1][0] = -3
-WinMatrix[0][1][1] = 0
-WinMatrix[1][0][0] = 0
-WinMatrix[1][0][1] = -3
-WinMatrix[1][1][0] = -2
-WinMatrix[1][1][1] = -2
+WinMatrix[0][0][0] = 200
+WinMatrix[0][0][1] = 200
+WinMatrix[0][1][0] = 50
+WinMatrix[0][1][1] = 300
+WinMatrix[1][0][0] = 300
+WinMatrix[1][0][1] = 50
+WinMatrix[1][1][0] = 100
+WinMatrix[1][1][1] = 100
 // overall win
 totalwin = 0
 // set number of rounds
@@ -139,6 +139,6 @@ if (username=="S1")
 display("<h1>Das Experiment ist nun beendet. Bitte klicken Sie weiter um die Auszahlung anzuzeigen</h1>")
 wait()
 display("Sie haben insgesamt folgende Anzahl an Talern verdient: " + totalwin)
-display("Dies entspricht einem Betrag von: " + totalwin * 1.25)
+display("Dies entspricht einem Betrag von: " + totalwin / 200)
 display("<br><br> Bitte verständigen Sie nun die Versuchsleitung per Handzeichen")
 waitForPlayers("Beenden")
