@@ -1,5 +1,5 @@
-// Public Good Game for 4 players per Group
-matchPerfectStranger(A,B,C,D)
+	// match 4 players each round 
+	matchStranger(A,B,C,D)
 
 // Introductory text
 display("<h1>Public Good Game</h1><hr>")
@@ -33,4 +33,4 @@ payoff = 10 - z + 0.4*sum(z)
 // Inform the subjects about their payoff
 display("Your payoff is <b>"+payoff+" Euros</b>")
 
-wait()
+wait()	matchDone()
