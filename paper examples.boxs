@@ -62,4 +62,5 @@ for (i=1; i<=rounds; i=i+1)
 	display("Your payoff is <b>"+payoff+" Euros</b>")
 
 	wait()
+	matchDone()
 }
