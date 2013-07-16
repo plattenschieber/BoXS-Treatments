@@ -6,9 +6,6 @@ for (i=1; i<=rounds; i=i+1)
 	// match 4 players each round 
 	matchStranger(A,B,C,D)
 
-
-// Mood induction Video
-video("file:///d:\moodInduction.avi")
 	// instructions
 	display("<h1>Public Good Game</h1><hr>")
 	display("Endowment: 20 Talers")
@@ -18,6 +15,10 @@ video("file:///d:\moodInduction.avi")
 	display("<br><img src='http://chart.apis.google.com/chart?cht=tx&chl=p_i=10%20-%20z_i%20%2B%20%200.4%20%20\cdot%20\sum_i{z_i}'>")
 	wait()
 
+	
+	// Mood induction Video
+	video("file:///Users/hans/Downloads/out.avi")
+	wait()
 
 // Wait until all players entered their respective contribution
 waitForPlayers()
