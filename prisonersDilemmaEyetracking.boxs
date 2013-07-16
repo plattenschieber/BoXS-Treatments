@@ -37,9 +37,8 @@ for (i=1; i<=rounds; i=i+1)
     // number of rounds per player combination
     rounds = 10
 
-
     // Welcome screen
-    //display("<h1>Willkommen beim Experiment</h1>")
+    display("<h1>Willkommen beim Experiment</h1>")
     display("Warten Sie auf die Instruktionen der Versuchsleiter ")
     //inputNumber(checkExperimenter)
     //assert(checkExperimenter == 222)
