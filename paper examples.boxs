@@ -16,7 +16,7 @@ for (i=1; i<=rounds; i=i+1)
 	wait()
 
 	// start the eyetracker for player S1 (or for more if wished)
-	if (username == "S1")
+	if (username == "S1" && i == 1)
 	{
 		// init eyetracker
 		eyetrackerInitialise("localhost",4444,5555)
@@ -61,6 +61,12 @@ for (i=1; i<=rounds; i=i+1)
 	// Inform the subjects about their payoff
 	display("Your payoff is <b>"+payoff+" Talers</b>")
 
+	// stop the eyetracker for player S1 (or for more if wished)
+	if (username == "S1" && i == rounds)
+	{
+		eyetrackerStop()
+		display("Eyetracker stopped")
+	}
 	wait()
 	matchDone()
 }
