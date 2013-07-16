@@ -9,9 +9,6 @@ for (i=1; i<=rounds; i=i+1)
 
 // Mood induction Video
 video("file:///d:\moodInduction.avi")
-// Read how much the subjects want to contribute and store it in z
-display("<br>Please choose the amount you would like to contribute:")
-inputNumber(z)
 	// instructions
 	display("<h1>Public Good Game</h1><hr>")
 	display("Endowment: 20 Talers")
@@ -24,6 +21,9 @@ inputNumber(z)
 
 // Wait until all players entered their respective contribution
 waitForPlayers()
+	// Read how much the subjects want to contribute and store it in z
+	display("<br>Please choose the amount you would like to contribute:")
+	inputNumber(z)
 
 // Inform the subjects about the results of the experiment
 display("You are player "+role+". You contributed <b>"+z+" Euros</b>. <br>The total amount donated is <b>"+sum(z)+" Euros</b>.")
