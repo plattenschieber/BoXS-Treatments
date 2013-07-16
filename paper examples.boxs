@@ -6,19 +6,20 @@ for (i=1; i<=rounds; i=i+1)
 	// match 4 players each round 
 	matchStranger(A,B,C,D)
 
-// Introductory text
-display("<h1>Public Good Game</h1><hr>")
-display("For this experiment you are endowed with <b>10 Euros</b>.")
-display("You are in a group with 3 other people.")
-display("You can contribute any amount of your endowment to a group project.")
-display("Your payoff is increased by <b>0.4 times</b> the total contributed to the project.")
-display("<br><img src='http://chart.apis.google.com/chart?cht=tx&chl=p_i=10%20-%20z_i%20%2B%20%200.4%20%20\cdot%20\sum_i{z_i}'>")
 
 // Mood induction Video
 video("file:///d:\moodInduction.avi")
 // Read how much the subjects want to contribute and store it in z
 display("<br>Please choose the amount you would like to contribute:")
 inputNumber(z)
+	// instructions
+	display("<h1>Public Good Game</h1><hr>")
+	display("Endowment: 20 Talers")
+	display("Players per Group: 4")
+	display("Contribution: 0-20 Talers (whole numbers)")
+	display("Payoff factor: 0.4 (")
+	display("<br><img src='http://chart.apis.google.com/chart?cht=tx&chl=p_i=10%20-%20z_i%20%2B%20%200.4%20%20\cdot%20\sum_i{z_i}'>")
+	wait()
 
 assert(z>=0)
 assert(z<=10)
