@@ -1,3 +1,8 @@
+// set the number of rounds - ATTENTION: this variable (including 'i') will not be seen inside
+rounds = 10
+// play the game 
+for (i=1; i<=rounds; i=i+1)
+{
 	// match 4 players each round 
 	matchStranger(A,B,C,D)
 
@@ -34,3 +39,4 @@ payoff = 10 - z + 0.4*sum(z)
 display("Your payoff is <b>"+payoff+" Euros</b>")
 
 wait()	matchDone()
+}
