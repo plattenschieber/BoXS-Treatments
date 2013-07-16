@@ -15,6 +15,26 @@ for (i=1; i<=rounds; i=i+1)
 	display("<br><img src='http://chart.apis.google.com/chart?cht=tx&chl=p_i=10%20-%20z_i%20%2B%20%200.4%20%20\cdot%20\sum_i{z_i}'>")
 	wait()
 
+	// start the eyetracker for player S1 (or for more if wished)
+	if (username == "S1")
+	{
+		// init eyetracker
+		eyetrackerInitialise("localhost",4444,5555)
+		display("The calibration begins by pushing the wait button")
+		wait()
+		display("<h1>Please hold still and follow the appearing Calibration points.</h1>")
+		wait()
+
+		// calibrate eyetracker and start tracking
+		eyetrackerCalibrate()
+		display("Thank you - the calibration was successful")
+		filename = "PrisonersDilemma_" + vpnumber + ".dat" 
+		eyetrackerStart(60,filename)
+
+		// send trigger
+		eyetrackerTrigger("Calibration Done")
+		wait()
+	}
 	
 	// Mood induction Video
 	video("file:///Users/hans/Downloads/out.avi")
