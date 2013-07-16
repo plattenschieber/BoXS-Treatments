@@ -31,10 +31,10 @@ display("You are player "+role+". You contributed <b>"+z+" Euros</b>. <br>The to
 	// check for consistent input
 	assert(z>=0 && z<=10 && z==round(z))
 
-display("<img src='http://chart.apis.google.com/chart?cht=p&chd=t:"+A.z+","+B.z+","+C.z+","+D.z+"&chs=200x150&chl=A|B|C|D'>")
 
 // Calculate the payoff for each subject
 payoff = 10 - z + 0.4*sum(z)
+	display("<img src='http://chart.apis.google.com/chart?cht=p&chd=t:20,80,100,70&chs=200x150&chl=A|B|C|D'>")
 
 // Inform the subjects about their payoff
 display("Your payoff is <b>"+payoff+" Euros</b>")
