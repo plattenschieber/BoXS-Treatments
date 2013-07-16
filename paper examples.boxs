@@ -21,15 +21,14 @@ inputNumber(z)
 	display("<br><img src='http://chart.apis.google.com/chart?cht=tx&chl=p_i=10%20-%20z_i%20%2B%20%200.4%20%20\cdot%20\sum_i{z_i}'>")
 	wait()
 
-assert(z>=0)
-assert(z<=10)
-assert(z==round(z))
 
 // Wait until all players entered their respective contribution
 waitForPlayers()
 
 // Inform the subjects about the results of the experiment
 display("You are player "+role+". You contributed <b>"+z+" Euros</b>. <br>The total amount donated is <b>"+sum(z)+" Euros</b>.")
+	// check for consistent input
+	assert(z>=0 && z<=10 && z==round(z))
 
 display("<img src='http://chart.apis.google.com/chart?cht=p&chd=t:"+A.z+","+B.z+","+C.z+","+D.z+"&chs=200x150&chl=A|B|C|D'>")
 
