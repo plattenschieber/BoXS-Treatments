@@ -58,6 +58,7 @@ while(_lastkey != 32)
 	waitTime(500)
 }
 
+wait()
 
 for (i=0; i<nGambles; i=i+1)
 {
@@ -110,3 +111,14 @@ for (i=0; i<nGambles; i=i+1)
 	}
 }
 
+// the game is over choose a gamble to play 
+// ...
+
+// present choosen gamble to user and let him start the dice rolling
+display("your gamble")
+// google api chart 
+// dice rolling function
+
+// present lottery win again with a chart (color changed)
+
+// the end
