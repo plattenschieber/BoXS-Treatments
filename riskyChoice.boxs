@@ -121,7 +121,7 @@ for (i=0; i<nGambles; i=i+1)
 	Rp2 = gamblesR[shuffle[i]][1][1]
 
 	// measure the time when gamble is shown
-	begintime = time;
+	beginTime = time
 	// collect images from google api 
 	pic1 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'>"
 	pic2 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'>"
