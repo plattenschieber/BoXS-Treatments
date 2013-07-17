@@ -48,6 +48,21 @@ gamblesR[4][0][1] = 4.8
 gamblesR[4][1][0] = 0.5
 gamblesR[4][1][1] = 2
 
+// first part of the presentation table
+table1 = "<table border='0'  cellspacing='0' cellpadding='0' width='400'>"	 
+table1 = table1 + "    <tr>"
+table1 = table1 + "      <td align='center'> Gamble A </td>"
+table1 = table1 + "      <td align='center'> Gamble B </td>"
+table1 = table1 + "    </tr>"
+table1 = table1 + "    <tr>"
+// here you come put some rows with picture or the like 
+// second part of the presentation table 
+table2 = "    		  </tr>"
+table2 = table2 + "    <tr>"
+table2 = table2 + "      <td align='center'> Press C for this Gamble</td>"
+table2 = table2 + "      <td align='center'> Press M for this Gamble</td>"
+table2 = table2 + "    </tr>"
+table2 = table2 + "  </th></table>"
 // instructions 
 while(_lastkey != 32)
 {
@@ -75,16 +90,6 @@ for (i=0; i<nGambles; i=i+1)
 	pic1 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'>"
 	pic2 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'>"
 	// and place them into a nice table
-	table = "<table border='0'  cellspacing='0' cellpadding='0' width='400'>"	 
-	table = table + "    <tr>"
-	table = table + "      <td align='center'> Gamble A </td>"
-	table = table + "      <td align='center'> Gamble B </td>"
-	table = table + "    </tr>"
-	table = table + "    <tr>"
-	table = table + "      <td>" + pic1 + "</td>"
-	table = table + "      <td>" + pic2 + "</td>"
-	table = table + "    </tr>"
-	table = table + "  </th></table>"
 
 	// gather players decision
 	while (_lastkey != 67 && _lastkey != 77)
