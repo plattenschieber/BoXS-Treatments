@@ -57,8 +57,6 @@ while(_lastkey != 32)
 	waitTime(500)
 }
 
-wait()
-
 for (i=0; i<nGambles; i=i+1)
 {
 	// shortening the google chart api call
