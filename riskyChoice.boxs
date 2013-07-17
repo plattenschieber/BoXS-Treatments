@@ -67,6 +67,9 @@ while(_lastkey != 32)
 	Rp1 = gambles[i][1][0][1]
 	Ro2 = gambles[i][1][1][0]
 	Rp2 = gambles[i][1][1][1]
+
+	// measure the time when gamble is shown
+	begintime = time;
 	// collect images from google api 
 	pic1 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'>"
 	pic2 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'>"
@@ -90,6 +93,7 @@ while(_lastkey != 32)
 		recordKeys()
 		waitTime(500)
 	}
+	results[i][1] = time - begintime // length of players decision making in ms
 
 	// this one is usually not needed, but we have to change _lastkey, before entering the loop again
 	while(_lastkey != 32)
