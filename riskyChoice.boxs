@@ -58,6 +58,15 @@ while(_lastkey != 32)
 	waitTime(500)
 }
 
+	// shortening the google chart api call
+	Lo1 = gambles[i][0][0][0]
+	Lp1 = gambles[i][0][0][1]
+	Lo2 = gambles[i][0][1][0]
+	Lp2 = gambles[i][0][1][1]
+	Ro1 = gambles[i][1][0][0]
+	Rp1 = gambles[i][1][0][1]
+	Ro2 = gambles[i][1][1][0]
+	Rp2 = gambles[i][1][1][1]
 	// collect images from google api 
 	pic1 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'>"
 	pic2 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'>"
