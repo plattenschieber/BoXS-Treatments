@@ -58,6 +58,15 @@ while(_lastkey != 32)
 	waitTime(500)
 }
 
+	// gather players decision
+	while (_lastkey != 67 && _lastkey != 77)
+	{
+		// present pies to player
+		display(table)
+		recordKeys()
+		waitTime(500)
+	}
+
 	// this one is usually not needed, but we have to change _lastkey, before entering the loop again
 	while(_lastkey != 32)
 	{
