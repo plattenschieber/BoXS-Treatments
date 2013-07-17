@@ -131,7 +131,7 @@ for (i=0; i<nGambles; i=i+1)
 	while (_lastkey != 67 && _lastkey != 77)
 	{
 		// present pies to player
-		display(table)
+		display(table1 + pic + table2)
 		recordKeys()
 		waitTime(500)
 	}
