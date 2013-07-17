@@ -111,14 +111,14 @@ while(_lastkey != 32)
 for (i=0; i<nGambles; i=i+1)
 {
 	// shortening the google chart api call
-	Lo1 = gamblesL[i][0][0]
-	Lp1 = gamblesL[i][0][1]
-	Lo2 = gamblesL[i][1][0]
-	Lp2 = gamblesL[i][1][1]
-	Ro1 = gamblesR[i][0][0]
-	Rp1 = gamblesR[i][0][1]
-	Ro2 = gamblesR[i][1][0]
-	Rp2 = gamblesR[i][1][1]
+	Lo1 = gamblesL[shuffle[i]][0][0]
+	Lp1 = gamblesL[shuffle[i]][0][1]
+	Lo2 = gamblesL[shuffle[i]][1][0]
+	Lp2 = gamblesL[shuffle[i]][1][1]
+	Ro1 = gamblesR[shuffle[i]][0][0]
+	Rp1 = gamblesR[shuffle[i]][0][1]
+	Ro2 = gamblesR[shuffle[i]][1][0]
+	Rp2 = gamblesR[shuffle[i]][1][1]
 
 	// measure the time when gamble is shown
 	begintime = time;
@@ -135,9 +135,13 @@ for (i=0; i<nGambles; i=i+1)
 		recordKeys()
 		waitTime(500)
 	}
-	
-	results[i][0] = _lastkey; // players decision
-	results[i][1] = time - begintime // length of players decision making in ms
+	// players decision	(for presented gamble - shuffle[i])
+	results[shuffle[i]][0] = _lastkey 
+	// length of players decision making in ms (for presented gamble)
+	results[shuffle[i]][1] = time - beginTime
+	// save the round in which player saw shuffle[i]
+	results[shuffle[i]][2] = i
+
 
 	// this one is usually not needed, but we have to change _lastkey, before entering the loop again
 	while(_lastkey != 32)
