@@ -58,6 +58,21 @@ while(_lastkey != 32)
 	waitTime(500)
 }
 
+	// collect images from google api 
+	pic1 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'>"
+	pic2 = "<img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'>"
+	// and place them into a nice table
+	table = "<table border='0'  cellspacing='0' cellpadding='0' width='400'>"	 
+	table = table + "    <tr>"
+	table = table + "      <td align='center'> Gamble A </td>"
+	table = table + "      <td align='center'> Gamble B </td>"
+	table = table + "    </tr>"
+	table = table + "    <tr>"
+	table = table + "      <td>" + pic1 + "</td>"
+	table = table + "      <td>" + pic2 + "</td>"
+	table = table + "    </tr>"
+	table = table + "  </th></table>"
+
 	// gather players decision
 	while (_lastkey != 67 && _lastkey != 77)
 	{
