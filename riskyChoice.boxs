@@ -63,6 +63,42 @@ table2 = table2 + "      <td align='center'> Press C for this Gamble</td>"
 table2 = table2 + "      <td align='center'> Press M for this Gamble</td>"
 table2 = table2 + "    </tr>"
 table2 = table2 + "  </th></table>"
+
+
+// write some numbers into an array ;) 
+for (i=0; i<nGambles; i=i+1)
+{
+	shuffle[i] = i
+}
+// and shuffle them a lot of times e.g. 100x
+for (i=0; i<100; i=i+1)
+{
+	for (j=0; j<nGambles; j=j+1)
+	{
+		// shuffle with your neighbour in half of the cases 
+		if (randomUniform()<=0.5)
+		{
+			// save number to be shuffled and ...
+			tmp = shuffle[j]
+			// shuffle upward
+			if (j+1 != nGambles)
+			{
+				shuffle[j] = shuffle[j+1]
+				shuffle[j+1] = tmp
+			}
+			// shuffle downward
+			if (j+1 == nGambles)
+			{
+				shuffle[j] = shuffle[j-1]
+				shuffle[j-1] = tmp
+			}
+		}
+	}
+	// DEBUG: Lustiger Effekt - Solltest Du dir mal unkommentiert anschauen, Andi (beide Zeilen)
+	//display("Shuffle: " + shuffle[0] + ", " + shuffle[1] + ", " + shuffle[2] + ", " + shuffle[3] + ", " + shuffle[4]) 
+	//waitTime(500)
+}
+
 // instructions 
 while(_lastkey != 32)
 {
