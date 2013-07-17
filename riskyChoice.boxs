@@ -158,11 +158,33 @@ for (i=0; i<nGambles; i=i+1)
 	}
 }
 
-// the game is over choose a gamble to play 
-// ...
-
 // present choosen gamble to user and let him start the dice rolling
 display("your gamble")
+// shortening the google chart api call
+Lo1 = gamblesL[choosenGamble][0][0]
+Lp1 = gamblesL[choosenGamble][0][1]
+Lo2 = gamblesL[choosenGamble][1][0]
+Lp2 = gamblesL[choosenGamble][1][1]
+Ro1 = gamblesR[choosenGamble][0][0]
+Rp1 = gamblesR[choosenGamble][0][1]
+Ro2 = gamblesR[choosenGamble][1][0]
+Rp2 = gamblesR[choosenGamble][1][1]
+
+// measure the time when gamble is shown
+beginTime = time
+// collect images from google api 
+pic = 		"<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'></td>"
+pic = pic + "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'></td>"
+display(table1 + pic + table2)
+
+while(_lastkey != 32)
+{
+	display("Present Decision")
+	display("Please press Space to continue")
+	recordKeys()
+	waitTime(500)
+}
+
 // google api chart 
 // dice rolling function
 
