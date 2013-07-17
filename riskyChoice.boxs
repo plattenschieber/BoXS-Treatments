@@ -93,6 +93,8 @@ while(_lastkey != 32)
 		recordKeys()
 		waitTime(500)
 	}
+	
+	results[i][0] = _lastkey; // players decision
 	results[i][1] = time - begintime // length of players decision making in ms
 
 	// this one is usually not needed, but we have to change _lastkey, before entering the loop again
