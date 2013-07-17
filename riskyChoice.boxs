@@ -1,53 +1,52 @@
 // Risky Choices 
 nGambles = 5 
 
-// set choices
-// gambles[gamble][l/r][outcome1, outcome2,..][p/o]
+// gamblesL/R[gamble][outcome1, outcome2,..][p/o]
 // first gamble 
-gambles[0][0][0][0] = 0.85
-gambles[0][0][0][1] = 5
-gambles[0][0][1][0] = 0.15
-gambles[0][0][1][1] = 2.5
-gambles[0][1][0][0] = 0.95
-gambles[0][1][0][1] = 5
-gambles[0][1][1][0] = 0.05
-gambles[0][1][1][1] = 0.35	
+gamblesL[0][0][0] = 0.85
+gamblesL[0][0][1] = 5
+gamblesL[0][1][0] = 0.15
+gamblesL[0][1][1] = 2.5
+gamblesR[0][0][0] = 0.95
+gamblesR[0][0][1] = 5
+gamblesR[0][1][0] = 0.05
+gamblesR[0][1][1] = 0.35	
 // second gamble 
-gambles[1][0][0][0] = 0.8
-gambles[1][0][0][1] = 4.8
-gambles[1][0][1][0] = 0.2
-gambles[1][0][1][1] = 2
-gambles[1][1][0][0] = 0.9
-gambles[1][1][0][1] = 4.8
-gambles[1][1][1][0] = 0.1
-gambles[1][1][1][1] = 0.2
+gamblesL[1][0][0] = 0.8
+gamblesL[1][0][1] = 4.8
+gamblesL[1][1][0] = 0.2
+gamblesL[1][1][1] = 2
+gamblesR[1][0][0] = 0.9
+gamblesR[1][0][1] = 4.8
+gamblesR[1][1][0] = 0.1
+gamblesR[1][1][1] = 0.2
 // third gamble 
-gambles[2][0][0][0] = 0.95
-gambles[2][0][0][1] = 4.8
-gambles[2][0][1][0] = 0.05
-gambles[2][0][1][1] = 0.6
-gambles[2][1][0][0] = 0.9
-gambles[2][1][0][1] = 4.8
-gambles[2][1][1][0] = 0.1
-gambles[2][1][1][1] = 2.4
+gamblesL[2][0][0] = 0.95
+gamblesL[2][0][1] = 4.8
+gamblesL[2][1][0] = 0.05
+gamblesL[2][1][1] = 0.6
+gamblesR[2][0][0] = 0.9
+gamblesR[2][0][1] = 4.8
+gamblesR[2][1][0] = 0.1
+gamblesR[2][1][1] = 2.4
 // fourth gamble 
-gambles[3][0][0][0] = 0.05
-gambles[3][0][0][1] = 4.8
-gambles[3][0][1][0] = 0.95
-gambles[3][0][1][1] = 0.6
-gambles[3][1][0][0] = 0.1
-gambles[3][1][0][1] = 2.6
-gambles[3][1][1][0] = 0.9
-gambles[3][1][1][1] = 0.6
+gamblesL[3][0][0] = 0.05
+gamblesL[3][0][1] = 4.8
+gamblesL[3][1][0] = 0.95
+gamblesL[3][1][1] = 0.6
+gamblesR[3][0][0] = 0.1
+gamblesR[3][0][1] = 2.6
+gamblesR[3][1][0] = 0.9
+gamblesR[3][1][1] = 0.6
 // fifth gamble 
-gambles[4][0][0][0] = 0.5
-gambles[4][0][0][1] = 2.2
-gambles[4][0][1][0] = 0.5
-gambles[4][0][1][1] = 2
-gambles[4][1][0][0] = 0.5
-gambles[4][1][0][1] = 4.8
-gambles[4][1][1][0] = 0.5
-gambles[4][1][1][1] = 2
+gamblesL[4][0][0] = 0.5
+gamblesL[4][0][1] = 2.2
+gamblesL[4][1][0] = 0.5
+gamblesL[4][1][1] = 2
+gamblesR[4][0][0] = 0.5
+gamblesR[4][0][1] = 4.8
+gamblesR[4][1][0] = 0.5
+gamblesR[4][1][1] = 2
 
 // instructions 
 while(_lastkey != 32)
@@ -63,14 +62,14 @@ wait()
 for (i=0; i<nGambles; i=i+1)
 {
 	// shortening the google chart api call
-	Lo1 = gambles[i][0][0][0]
-	Lp1 = gambles[i][0][0][1]
-	Lo2 = gambles[i][0][1][0]
-	Lp2 = gambles[i][0][1][1]
-	Ro1 = gambles[i][1][0][0]
-	Rp1 = gambles[i][1][0][1]
-	Ro2 = gambles[i][1][1][0]
-	Rp2 = gambles[i][1][1][1]
+	Lo1 = gamblesL[i][0][0]
+	Lp1 = gamblesL[i][0][1]
+	Lo2 = gamblesL[i][1][0]
+	Lp2 = gamblesL[i][1][1]
+	Ro1 = gamblesR[i][0][0]
+	Rp1 = gamblesR[i][0][1]
+	Ro2 = gamblesR[i][1][0]
+	Rp2 = gamblesR[i][1][1]
 
 	// measure the time when gamble is shown
 	begintime = time;
