@@ -142,6 +142,11 @@ for (i=0; i<nGambles; i=i+1)
 	// save the round in which player saw shuffle[i]
 	results[shuffle[i]][2] = i
 
+	// choose a gamble by chance 
+	if (i == shuffle[i])
+	{
+		choosenGamble = shuffle[i]
+	}
 
 	// this one is usually not needed, but we have to change _lastkey, before entering the loop again
 	while(_lastkey != 32)
