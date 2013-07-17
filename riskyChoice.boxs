@@ -58,6 +58,9 @@ while(_lastkey != 32)
 	waitTime(500)
 }
 
+
+for (i=0; i<nGambles; i=i+1)
+{
 	// shortening the google chart api call
 	Lo1 = gambles[i][0][0][0]
 	Lp1 = gambles[i][0][0][1]
@@ -105,3 +108,5 @@ while(_lastkey != 32)
 		recordKeys()
 		waitTime(500)
 	}
+}
+
