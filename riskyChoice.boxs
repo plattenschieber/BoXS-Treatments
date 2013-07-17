@@ -50,5 +50,19 @@ gambles[4][1][1][0] = 0.5
 gambles[4][1][1][1] = 2
 
 // instructions 
-display("In the following you will see some Pie Charts, each representing the probabilities of a lottery")
+while(_lastkey != 32)
+{
+	display("In the following you will see some Pie Charts, each representing the probabilities of a lottery")
+	display("Please press space to continue")
+	recordKeys()
+	waitTime(500)
+}
 
+	// this one is usually not needed, but we have to change _lastkey, before entering the loop again
+	while(_lastkey != 32)
+	{
+		display("Present Decision")
+		display("Please press Space to continue")
+		recordKeys()
+		waitTime(500)
+	}
