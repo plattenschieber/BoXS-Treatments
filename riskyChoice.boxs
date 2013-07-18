@@ -194,6 +194,38 @@ while(_lastkey != 10)
 }
 
 
+// roll the dice
+rand = randomUniform() 
+if (decision == "A")
+{
+	if (rand <= gamblesL[randChoosenGamble][0][0])
+	{
+		outcome = gamblesL[randChoosenGamble][0][1]
+		tdPic1 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chco=FF0000,FFEAC0&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'></td>"
+	}
+	if (rand > gamblesL[randChoosenGamble][0][0])
+	{
+		outcome = gamblesL[randChoosenGamble][1][1]
+		tdPic1 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chco=FF9900,FF0000&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'></td>"
+	}
+	tdPic2 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chco=E0E0E0,FCF7F7&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'></td>"
+}
+
+if (decision == "B")
+{
+	tdPic1 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chco=E0E0E0,FCF7F7&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'></td>"
+	if (rand<= gamblesR[randChoosenGamble][0][0])
+	{
+		outcome = gamblesR[randChoosenGamble][0][1]
+		tdPic2 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chco=FF0000,FFEAC0&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'></td>"
+	}
+	if (rand > gamblesR[randChoosenGamble][0][0])
+	{
+		outcome = gamblesR[randChoosenGamble][1][1]
+		tdPic2 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 + "," + Rp2 + "&chco=FF9900,FF0000&chs=260x150&chl=" + Ro1  + "%20EUR|" + Ro2 +  "%20EUR'></td>"
+	}
+}
+
 // present lottery win again with a chart (color changed)
 table = tOpen + trOpen + tdPic1 + tdPic2 + trClose + tClose
 display(table)
