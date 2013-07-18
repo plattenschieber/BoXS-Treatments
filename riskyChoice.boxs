@@ -175,6 +175,7 @@ Ro1 = gamblesR[randChoosenGamble][0][1]
 Rp2 = gamblesR[randChoosenGamble][1][0]
 Ro2 = gamblesR[randChoosenGamble][1][1]
 
+// measure the time when gamble is shown TODO: Check where to put timeMeasurements
 beginTime = time
 // collect images from google api 
 tdPic1 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'></td>"
