@@ -194,4 +194,9 @@ while(_lastkey != 10)
 
 
 // present lottery win again with a chart (color changed)
+table = tOpen + trOpen + tdPic1 + tdPic2 + trClose + tClose
+display(table)
+display("<h1 align='center'>You won " + outcome + " EUR</h1>")
+wait()
+
 
