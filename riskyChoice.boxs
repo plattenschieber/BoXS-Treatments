@@ -184,8 +184,10 @@ table = tOpen + trOpen + td1 + td2 + trClose + trOpen + tdPic1 + tdPic2 + trClos
 
 while(_lastkey != 10)
 {
-	display("Present Decision")
-	display("Please press Space to continue")
+	display(table)
+	display("<h1 align='center'>This is the randomly choosen gamble</h1>")
+	display("Your decision was: Gamble " + decision)
+	display("Please press Enter to roll the dice")
 	recordKeys()
 	waitTime(500)
 }
