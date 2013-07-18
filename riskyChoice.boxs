@@ -182,7 +182,7 @@ tdPic2 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 +
 // and place them into a nice table
 table = tOpen + trOpen + td1 + td2 + trClose + trOpen + tdPic1 + tdPic2 + trClose + tClose
 
-while(_lastkey != 32)
+while(_lastkey != 10)
 {
 	display("Present Decision")
 	display("Please press Space to continue")
