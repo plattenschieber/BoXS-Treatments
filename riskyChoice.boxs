@@ -145,6 +145,14 @@ for (i=0; i<nGambles; i=i+1)
 	// choose a gamble by chance 
 	if (shuffle[i] == randChoosenGamble)
 	{
+		if(_lastkey == 67)
+		{
+			decision = "A"
+		}
+		if(_lastkey == 77)
+		{
+			decision = "B"
+		}
 	}
 
 	// this one is usually not needed, but we have to change _lastkey, before entering the loop again
