@@ -49,20 +49,17 @@ gamblesR[4][1][0] = 0.5
 gamblesR[4][1][1] = 2
 
 // first part of the presentation table
-table1 = "<table border='0'  cellspacing='0' cellpadding='0' width='400'>"	 
-table1 = table1 + "    <tr>"
-table1 = table1 + "      <td align='center'> Gamble A </td>"
-table1 = table1 + "      <td align='center'> Gamble B </td>"
-table1 = table1 + "    </tr>"
-table1 = table1 + "    <tr>"
-// here you come put some rows with picture or the like 
-// second part of the presentation table 
-table2 = "    		  </tr>"
-table2 = table2 + "    <tr>"
-table2 = table2 + "      <td align='center'> Press C for this Gamble</td>"
-table2 = table2 + "      <td align='center'> Press M for this Gamble</td>"
-table2 = table2 + "    </tr>"
-table2 = table2 + "  </th></table>"
+tOpen   = "<table border='0' cellspacing='0' cellpadding='0' width='520'>"	 
+trOpen  = "  <tr>"
+trClose = "  </tr>"
+tClose  = "</table>"
+td1 = "<td align='center'> Gamble A </td>"
+td2 = "<td align='center'> Gamble B </td>"
+td3 = "<td align='center'> Press C for this Gamble</td>"
+td4 = "<td align='center'> Press M for this Gamble</td>"
+
+
+
 
 
 // write some numbers into an array ;) 
