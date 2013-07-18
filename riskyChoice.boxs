@@ -145,13 +145,11 @@ for (i=0; i<nGambles; i=i+1)
 	// choose a gamble by chance 
 	if (shuffle[i] == randChoosenGamble)
 	{
-		choosenGamble = shuffle[i]
 	}
 
 	// this one is usually not needed, but we have to change _lastkey, before entering the loop again
 	while(_lastkey != 32)
 	{
-		display("Present Decision")
 		display("Please press Space to continue")
 		recordKeys()
 		waitTime(500)
@@ -159,7 +157,6 @@ for (i=0; i<nGambles; i=i+1)
 }
 
 // present choosen gamble to user and let him start the dice rolling
-display("your gamble")
 // shortening the google chart api call
 Lp1 = gamblesL[randChoosenGamble][0][0]
 Lo1 = gamblesL[randChoosenGamble][0][1]
@@ -185,9 +182,6 @@ while(_lastkey != 32)
 	waitTime(500)
 }
 
-wait()
-// dice rolling function
 
 // present lottery win again with a chart (color changed)
 
-// the end
