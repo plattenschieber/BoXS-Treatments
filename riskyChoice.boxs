@@ -95,6 +95,7 @@ for (i=0; i<100; i=i+1)
 	//display("Shuffle: " + shuffle[0] + ", " + shuffle[1] + ", " + shuffle[2] + ", " + shuffle[3] + ", " + shuffle[4]) 
 	//waitTime(500)
 }
+randChoosenGamble = randomUniformInteger(0,nGambles-1)
 
 // instructions 
 while(_lastkey != 32)
@@ -140,7 +141,7 @@ for (i=0; i<nGambles; i=i+1)
 	results[shuffle[i]][2] = i
 
 	// choose a gamble by chance 
-	if (i == shuffle[i])
+	if (shuffle[i] == randChoosenGamble)
 	{
 		choosenGamble = shuffle[i]
 	}
