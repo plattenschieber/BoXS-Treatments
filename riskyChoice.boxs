@@ -110,14 +110,14 @@ while(_lastkey != 32)
 for (i=0; i<nGambles; i=i+1)
 {
 	// shortening the google chart api call
-	Lo1 = gamblesL[shuffle[i]][0][0]
-	Lp1 = gamblesL[shuffle[i]][0][1]
-	Lo2 = gamblesL[shuffle[i]][1][0]
-	Lp2 = gamblesL[shuffle[i]][1][1]
-	Ro1 = gamblesR[shuffle[i]][0][0]
-	Rp1 = gamblesR[shuffle[i]][0][1]
-	Ro2 = gamblesR[shuffle[i]][1][0]
-	Rp2 = gamblesR[shuffle[i]][1][1]
+	Lp1 = gamblesL[shuffle[i]][0][0]
+	Lo1 = gamblesL[shuffle[i]][0][1]
+	Lp2 = gamblesL[shuffle[i]][1][0]
+	Lo2 = gamblesL[shuffle[i]][1][1]
+	Rp1 = gamblesR[shuffle[i]][0][0]
+	Ro1 = gamblesR[shuffle[i]][0][1]
+	Rp2 = gamblesR[shuffle[i]][1][0]
+	Ro2 = gamblesR[shuffle[i]][1][1]
 
 	// measure the time when gamble is shown
 	beginTime = time
@@ -160,16 +160,15 @@ for (i=0; i<nGambles; i=i+1)
 // present choosen gamble to user and let him start the dice rolling
 display("your gamble")
 // shortening the google chart api call
-Lo1 = gamblesL[choosenGamble][0][0]
-Lp1 = gamblesL[choosenGamble][0][1]
-Lo2 = gamblesL[choosenGamble][1][0]
-Lp2 = gamblesL[choosenGamble][1][1]
-Ro1 = gamblesR[choosenGamble][0][0]
-Rp1 = gamblesR[choosenGamble][0][1]
-Ro2 = gamblesR[choosenGamble][1][0]
-Rp2 = gamblesR[choosenGamble][1][1]
+Lp1 = gamblesL[randChoosenGamble][0][0]
+Lo1 = gamblesL[randChoosenGamble][0][1]
+Lp2 = gamblesL[randChoosenGamble][1][0]
+Lo2 = gamblesL[randChoosenGamble][1][1]
+Rp1 = gamblesR[randChoosenGamble][0][0]
+Ro1 = gamblesR[randChoosenGamble][0][1]
+Rp2 = gamblesR[randChoosenGamble][1][0]
+Ro2 = gamblesR[randChoosenGamble][1][1]
 
-// measure the time when gamble is shown
 beginTime = time
 // collect images from google api 
 pic = 		"<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Lp1 + "," + Lp2 + "&chs=260x150&chl=" + Lo1  + "%20EUR|" + Lo2 +  "%20EUR'></td>"
