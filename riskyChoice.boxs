@@ -101,6 +101,7 @@ randChoosenGamble = randomUniformInteger(0,nGambles-1)
 while(_lastkey != 32)
 {
 	display("In the following you will see some Pie Charts, each representing the probabilities of a lottery")
+	display("Please select the gamble you prefer. One of the decisions will be randomly selected and paid.")
 	display("Please press space to continue")
 	recordKeys()
 	waitTime(500)
