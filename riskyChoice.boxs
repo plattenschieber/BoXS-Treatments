@@ -185,7 +185,7 @@ while(_lastkey != 32)
 	waitTime(500)
 }
 
-// google api chart 
+wait()
 // dice rolling function
 
 // present lottery win again with a chart (color changed)
