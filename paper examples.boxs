@@ -64,6 +64,8 @@ for (i=1; i<=rounds; i=i+1)
 
 	// Calculate the payoff for each subject
 	payoff = 10 - z + 0.4*sum(z)
+	// players overall payoff
+	payoffAll = payoffAll + payoff
 
 	// length of players decision making in ms (for presented gamble)
 	results[i][1] = time - begintime
@@ -81,6 +83,8 @@ for (i=1; i<=rounds; i=i+1)
 		}
 
 		// show payoff for all rounds
+		display("Your overall payoff is <b>"+payoffAll+" Talers</b>")
+		wait()
 	}
 	matchDone()
 }
