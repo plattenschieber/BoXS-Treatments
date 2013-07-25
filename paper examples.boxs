@@ -37,7 +37,7 @@ for (i=1; i<=rounds; i=i+1)
 	}
 	
 	// Mood induction Video
-	video("file:///Users/hans/Downloads/out.avi")
+	display("<img src='file:///Users/hans/Downloads/out.gif'</img>")
 	wait(100000)
 
 	// Read how much the subjects want to contribute and store it in z
