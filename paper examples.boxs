@@ -6,39 +6,44 @@ for (i=1; i<=rounds; i=i+1)
 	// match 4 players each round 
 	matchStranger(A,B,C,D)
 
-	// instructions
-	display("<h1>Public Good Game</h1><hr>")
-	display("Endowment: 20 Talers")
-	display("Players per Group: 4")
-	display("Contribution: 0-20 Talers (whole numbers)")
-	display("Payoff factor: 0.4 (")
-	display("<br><img src='http://chart.apis.google.com/chart?cht=tx&chl=p_i=10%20-%20z_i%20%2B%20%200.4%20%20\cdot%20\sum_i{z_i}'>")
-	wait()
-
-	// start the eyetracker for player S1 (or for more if wished)
-	if (username == "S1" && i == 1)
+	// present instructions and mood induction in the first round
+	if (i==1)
 	{
-		// init eyetracker
-		eyetrackerInitialise("localhost",4444,5555)
-		display("The calibration begins by pushing the wait button")
-		wait()
-		display("<h1>Please hold still and follow the appearing Calibration points.</h1>")
+		// instructions
+		display("<h1>Public Good Game</h1><hr>")
+		display("Endowment: 20 Talers")
+		display("Players per Group: 4")
+		display("Contribution: 0-20 Talers (whole numbers)")
+		display("Payoff factor: 0.4 (")
+		display("<br><img src='http://chart.apis.google.com/chart?cht=tx&chl=p_i=10%20-%20z_i%20%2B%20%200.4%20%20\cdot%20\sum_i{z_i}'>")
 		wait()
 
-		// calibrate eyetracker and start tracking
-		eyetrackerCalibrate()
-		display("Thank you - the calibration was successful")
-		filename = "PrisonersDilemma_" + vpnumber + ".dat" 
-		eyetrackerStart(60,filename)
+		// start the eyetracker for player S1 (or for more if wished)
+		if (username == "S1")
+		{
+			// init eyetracker
+			eyetrackerInitialise("localhost",4444,5555)
+			display("The calibration begins by pushing the wait button")
+			wait()
+			display("<h1>Please hold still and follow the appearing Calibration points.</h1>")
+			wait()
 
-		// send trigger
-		eyetrackerTrigger("Calibration Done")
-		wait()
+			// calibrate eyetracker and start tracking
+			eyetrackerCalibrate()
+			display("Thank you - the calibration was successful")
+			filename = "PrisonersDilemma_" + vpnumber + ".dat" 
+			eyetrackerStart(60,filename)
+
+			// send trigger
+			eyetrackerTrigger("Calibration Done")
+			wait()
+		}
+	
+		// Mood induction Video
+		display("<img src='file:///Users/hans/Downloads/out.gif'</img>")
+		wait(100000)
 	}
 	
-	// Mood induction Video
-	display("<img src='file:///Users/hans/Downloads/out.gif'</img>")
-	wait(100000)
 
 	// Read how much the subjects want to contribute and store it in z
 	display("<br>Please choose the amount you would like to contribute:")
