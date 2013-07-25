@@ -183,12 +183,15 @@ tdPic2 = "<td><img src='http://chart.apis.google.com/chart?cht=p&chd=t:" + Rp1 +
 // and place them into a nice table
 table = tOpen + trOpen + td1 + td2 + trClose + trOpen + tdPic1 + tdPic2 + trClose + tClose
 
-while(_lastkey != 10)
+// reset _lastkey
+_lastkey = 0
+
+while(_lastkey != 32)
 {
 	display(table)
 	display("<h1 align='center'>This is the randomly choosen gamble</h1>")
 	display("Your decision was: Gamble " + decision)
-	display("Please press Enter to roll the dice")
+	display("Please press Space to roll the dice")
 	recordKeys()
 	waitTime(500)
 }
