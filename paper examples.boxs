@@ -60,13 +60,18 @@ for (i=1; i<=rounds; i=i+1)
 
 	// Inform the subjects about their payoff
 	display("Your payoff is <b>"+payoff+" Talers</b>")
-
-	// stop the eyetracker for player S1 (or for more if wished)
-	if (username == "S1" && i == rounds)
-	{
-		eyetrackerStop()
-		display("Eyetracker stopped")
-	}
 	wait()
+
+	if (i == 10) 
+	{
+		// stop the eyetracker for player S1 (or for more if wished)
+		if (username == "S1")
+		{
+			eyetrackerStop()
+			display("Eyetracker stopped")
+		}
+
+		// show payoff for all rounds
+	}
 	matchDone()
 }
