@@ -91,7 +91,7 @@ for (i=1; i<=rounds; i=i+1)
 
 		// show payoff for all rounds
 		display("Your overall payoff is <b>"+payoffAll+" Talers</b>")
-		wait()
+		waitForExperimenter()
 	}
 	matchDone()
 }
