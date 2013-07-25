@@ -67,8 +67,15 @@ for (i=1; i<=rounds; i=i+1)
 	// players overall payoff
 	payoffAll = payoffAll + payoff
 
-	// length of players decision making in ms (for presented gamble)
+	// players decision
+	results[i][0] = z
+	// length of players decision making in ms
 	results[i][1] = time - begintime
+	// players payoff 
+	results[i][2] = payoff
+	// overall payoff
+	results[i][3] = payoffAll
+
 	// Inform the subjects about their payoff
 	display("Your payoff is <b>"+payoff+" Talers</b>")
 	wait()
