@@ -1,3 +1,5 @@
+// Appendix x shows a sample for a risky choice programm using the (deprecated) google charts api, to present the gambles visually. Here we firstly made use of a new function, namely 'recordKeys()', in BoXS. This let us continue to the next stage by pressing a predefined key (e.g. 'Enter', 'Space', 'C',...), instead of using the mouse to press the wait() button. The gambles are hard coded into an array structure, which is then accessed randomly via an index array 'shuffle'. We shuffled the index array via a bubblesort like algorithm, which needs at least nGambles/2 iterations to allow every possible permutation to occur. The generated charts are loaded into an html table for a conforming and easy to adopt visualization of the stages. The decision time for each task is measured precisely in miliseconds and can be used for further analysis. 
+
 // Risky Choices 
 nGambles = 5 
 
