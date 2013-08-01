@@ -2,6 +2,7 @@
 
 // Risky Choices 
 nGambles = 5 
+gameTime = time
 
 // gamblesL/R[gamble][outcome1, outcome2,..][p/o]
 // first gamble 
@@ -59,10 +60,6 @@ td1 = "<td align='center'> Gamble A </td>"
 td2 = "<td align='center'> Gamble B </td>"
 td3 = "<td align='center'> Press C for this Gamble</td>"
 td4 = "<td align='center'> Press M for this Gamble</td>"
-
-
-
-
 
 // write some numbers into an array ;) 
 for (i=0; i<nGambles; i=i+1)
@@ -235,6 +232,6 @@ if (decision == "B")
 table = tOpen + trOpen + tdPic1 + tdPic2 + trClose + tClose
 display(table)
 display("<h1 align='center'>You won " + outcome + " EUR</h1>")
+gameEnd = gameTime - time
 wait()
-
 
