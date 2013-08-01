@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Boxs-treatments</title>
+  <meta name="description" content="BoXS example programs">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Boxs-treatments</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">BoXS example programs</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/plattenschieber/BoXS-Treatments/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/plattenschieber/BoXS-Treatments/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/plattenschieber/BoXS-Treatments" class="code">View Boxs-treatments on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a name="welcome" class="anchor" href="#welcome"><span class="octicon octicon-link"></span></a>Welcome!</h1>
+
+<p>Here you find short descriptions for the example programs</p>
+
+<h3>
+<a name="riskychoiceboxs" class="anchor" href="#riskychoiceboxs"><span class="octicon octicon-link"></span></a>'RiskyChoice.boxs'</h3>
+
+<p>Appendix x shows a sample for a risky choice programm using the (deprecated) google charts api, to present the gambles visually. Here we firstly made use of a new function, namely 'recordKeys()', in BoXS. This let us continue to the next stage by pressing a predefined key (e.g. 'Enter', 'Space', 'C',...), instead of using the mouse to press the wait() button. The gambles are hard coded into an array structure, which is then accessed randomly via an index array 'shuffle'. We shuffled the index array via a bubblesort like algorithm, which needs at least nGambles/2 iterations to allow every possible permutation to occur. The generated charts are loaded into an html table for a conforming and easy to adopt visualization of the stages. The decision time for each task is measured precisely in miliseconds and can be used for further analysis. </p>
+
+<h3>
+<a name="prisonersdilemmabasestructureboxs" class="anchor" href="#prisonersdilemmabasestructureboxs"><span class="octicon octicon-link"></span></a>'PrisonersDilemmaBaseStructure.boxs'</h3>
+
+<p>Appendix y shows an easy to implement prisoners dilemma programm which allows complete control of an Eyetracker by only using four commands. The game is divided in a stage for the very first round presenting the instructions, the games between the players and a last round indicating the overall win. A stranger matching ensures anonymity - perfect stranger matching can be used, too, but remember, that the number of rounds depends strongly on the number of participants available - The stages are presented in form of html tables. This shortens the amount of code and enhances its readibilty. Using the eyetracking feature consists of the following procedure: 
+1. initialising the connection - eyetrackerInitialise("localhost",4444,5555), 
+2. performing the calibration - eyetrackerCalibrate(), 
+3. starting the recording - eyetrackerStart(120, filename), 
+4. sending trigger to indicate events in BoXS - eyetrackerTrigger("Trigger Name") and last but not least
+5. stopping the eyetracker - eyetrackerStop(). We use eyetracking only for player 'S1', but this can easily be expanded to as many player as eyetracker are available.</p>
+
+<h3>
+<a name="paper-exampleboxs" class="anchor" href="#paper-exampleboxs"><span class="octicon octicon-link"></span></a>'paper example.boxs'</h3>
+
+<p>Appendix z shows a public good game in its shortest form in BoXS. It consists of a mood induction video (converted to gif, as the video function is not working properly), full eyetracker usage, a graphical visualization of the contributions and a stranger multiplayer enviroment for a four player PGG in only 58 lines of code (without comments and newlines).</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>2013 - Mirko Seithe, Andreas Glöckner and Jeronim Morina (<a href="https://github.com/plattenschieber" class="user-mention">@plattenschieber</a>) </p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://boxs.uni-bonn.de/documentation/index.html">http://boxs.uni-bonn.de/documentation/index.html</a> or contact <a href="mailto:morina@coll.mpg.de">morina@coll.mpg.de</a> and we’ll help you sort it out.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/plattenschieber" class="avatar"><img src="https://secure.gravatar.com/avatar/8018d0a43616388b46566ba1fb8b1099?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/plattenschieber">plattenschieber</a> maintains <a href="https://github.com/plattenschieber/BoXS-Treatments">Boxs-treatments</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/plattenschieber/BoXS-Treatments/tarball/master" class="tar">tar</a><a href="https://github.com/plattenschieber/BoXS-Treatments/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
