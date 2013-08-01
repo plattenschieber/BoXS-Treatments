@@ -1,5 +1,3 @@
-// Appendix z shows a public good game in its shortest form in BoXS. It consists of a mood induction video (converted to gif, as the video function is not working properly), full eyetracker usage, a graphical visualization of the contributions and a stranger multiplayer enviroment for a four player PGG in only 58 lines of code (without comments and newlines).
-
 // set the number of rounds - ATTENTION: this variable (including 'i') will not be seen inside
 rounds = 10
 // play the game 
